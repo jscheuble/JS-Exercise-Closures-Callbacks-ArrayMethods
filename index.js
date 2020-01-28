@@ -307,7 +307,7 @@ function counterMaker() {
 */
 function counterMakerWithLimit(maxCount) {
   let count = 0;
-  function counter() {
+  return function() {
     if (count <= maxCount) {
       return count++;
     } else {
@@ -315,7 +315,6 @@ function counterMakerWithLimit(maxCount) {
       return count++;
     } 
   }
-  return counter;
 }
 
 /////////////// END OF CHALLENGE ///////////////
