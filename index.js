@@ -168,11 +168,11 @@ function processContains(item, array, callback) {
 */
 function processDuplicateFree(arr, callback) {
   let filtered = [];
-  arr.filter(function(item) {
+  callback(arr.filter(function(item) {
     if (!filtered.includes(item)) {
       filtered.push(item);
     }
-  });
+  }));
   return filtered;
 }
 
